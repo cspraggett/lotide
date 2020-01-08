@@ -4,7 +4,11 @@ const assertEqual = (actual, expected) =>
     : console.log(`🛑 🛑 🛑 Assertion Failed: ${actual} !== ${expected}`);
 
 const eqObjects = (ob1, ob2) => {
-
+  if (Object.keys(ob1).length !== Object.keys(ob2).length) return false;
+  for (const keys of Object.keys(ob1)) {
+    if (ob1[keys] !== ob2[keys]) return false;
+  }
+  return true;
 };
 
 const ab = {a: "1", b: "2"};
