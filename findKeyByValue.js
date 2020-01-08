@@ -16,5 +16,16 @@ const bestTVShowsByGenre = {
   drama: "The Wire"
 };
 
+const programmingLanguages = {
+  c: 'low level',
+  javaScript: 'high level',
+  golang: 'low level',
+  python: 'high level',
+  html: 'not a programming language'
+};
+
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70's Show"), undefined);
+assertEqual(findKeyByValue(programmingLanguages, 'not a programming language'), 'html');
+assertEqual(findKeyByValue(programmingLanguages, 'high level'), 'javaScript');
+assertEqual(findKeyByValue(programmingLanguages, 'low level'), 'c');
