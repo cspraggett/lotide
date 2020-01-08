@@ -10,4 +10,11 @@ const findKeyByValue = (obj, value) => {
   return undefined;
 };
 
-console.log(findKeyByValue({a:1,b:2}, 3));
+const bestTVShowsByGenre = {
+  sci_fi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama: "The Wire"
+};
+
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70's Show"), undefined);
