@@ -19,8 +19,3 @@ describe("#head", () => {
     assert.strictEqual(head(["Hello", "World"]), "Hello");
   });
 });
-
-// assertEqual(head([0, 1]), 0);
-// assertEqual(head([0, 1]), 1);
-// assertEqual(head([]), undefined);
-// assertEqual(head(["Hello", "World"]), "Hello");
