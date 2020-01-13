@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@cspraggett/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A copy of lodash writen for my studies at Lighthouse Labs",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/cspraggett/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name": "Christopher Spraggett",
+    "email": "cspraggett@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cspraggett/lotide/issues"
