@@ -1,15 +1,4 @@
-const assertEqual = (actual, expected) =>
-  actual === expected
-    ? console.log(`✅ ✅ ✅ consoleAssertion Passed: ${actual} === ${expected}`)
-    : console.log(`🛑 🛑 🛑 Assertion Failed: ${actual} !== ${expected}`);
-
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) return false;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) return false;
-  }
-  return true;
-};
+const eqArrays = require("./eqArrays");
 
 let isObject = ob => typeof ob === "object" && !Array.isArray(ob);
 
@@ -32,28 +21,4 @@ const eqObjects = (ob1, ob2) => {
   return true;
 };
 
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
-// assertEqual(eqObjects(ab, ba), true);
-
-// const abc = { a: "1", b: "2", c: "3" };
-// assertEqual(eqObjects(ab, abc), false); // => false
-
-// const cd = { c: "1", d: ["2", 3] };
-// const dc = { d: ["2", 3], c: "1" };
-// assertEqual(eqObjects(cd, dc), true);
-
-// const cd2 = { c: "1", d: ["2,", 3, 4] };
-// assertEqual(eqObjects(cd, cd2), false);
-
-assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); // => true
-
-assertEqual(
-  eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }),
-  false
-); // => false
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false); // => false
-assertEqual(
-  eqObjects({ a: { b: 2, c: { x: 7 } } }, { a: { b: 2, c: { x: 7 } } }),
-  true
-);
+module.exports = eqObjects;
